@@ -20,14 +20,17 @@
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
 		<init-param>
 			<param-name>jersey.config.server.provider.packages</param-name>
-			<param-value>org.catais.ili2db.rest</param-value>
+			<param-value>
+				org.catais.ili2db.rest
+				com.fasterxml.jackson.jaxrs.json
+			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>REST Service ili2gpkg</servlet-name>
-		<url-pattern>/rest/*</url-pattern>
+		<url-pattern>/rest/v1/*</url-pattern>
 	</servlet-mapping>
 
 </web-app>
